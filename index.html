@@ -107,7 +107,7 @@
 					<li><a href="#">Events</a></li> 
 					<li><a href="#">Contact</a></li>
 					<li><a id="navbar-separator"><img src="bg/header/navbar/separator.png" width="auto" height="40px"></a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li>
+					<li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -117,53 +117,49 @@
 	
 <!-- END  N a v i g a t i o n - S e c t i o n --> 
 	</header>
-
-	<div class="bg-img">	
-		<div class="span3"></div>
-		<div class="span6">		
-		<img class="center-block" id="logo-font"src="bg/header/logofont1.png" alt="logofont">
+	<div id="bg-filter">
+		<div class="bg-img">	
+			<div class="span3"></div>
+			<div class="span6">		
+			 <img class="center-block" id="logo-font"src="bg/header/logofont1.png" alt="logofont">
+			</div>
+			<div class="span3"></div>	
 		</div>
-		<div class="span3"></div>	
-	</div>
-		
+	</div>	
 		
 <!-- START  L o g i n / R e g i s t e r - S e c t i o n -->	
-	<div id="login-section">
-		
-<!--
-	    <div class="content-1">
-	      <div class="login-section">
-	        <h1>Login</h1>
-	          <form method="post">
-	            <input type="email" name="email-name" placeholder="i<3buskers@gmail.com" required="required" />
-	              <input type="password" name="p" placeholder="Password" required="required" />
-	              <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
-	              <p> Not connected with us? <br><a href="">Sign up here!</a></p>
-	          </form>
-	    </div>
--->
-<!--
-	<div id="openModal" class="modalDialog">
-	    <div>
-	      <div>
-	      <!-- Login 
-	    <div class="content-1">
-	      <div class="login-section">
-	      <img id="closebtn" src="bg/header/close.png" onclick="window.location.href='#close'">
-	        <h1>Login</h1>
-	          <form method="post">
-	            <input type="email" name="email-name" placeholder="i<3buskers@gmail.com" required="required" />
-	              <input type="password" name="p" placeholder="Password" required="required" />
-	              <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
-	              <p> Not connected with us? <br><a id="reglink" href="register.html">Sign up here!</a></p>
-	          </form>
-	      </div>
-	    </div>
-	      
-	      </div>
-	    </div>
-	</div>
-	
+	<!-- Modal -->
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-sm" id="custom-modal-dialog">
+		<div class="text-center">
+			<h3>Sign In</h3>
+			<p id="custom-modal-p">At vero eos et accusamus et iusto dignissimos.</p>
+		</div>
+	    	<!-- Modal content --> 
+		    <div class="modal-content custom-modal-content">
+				<div class="modal-header">
+				<!-- <a><span class="glyphicon glyphicon-remove"></span></a> -->
+				</div>
+				<div class="modal-body text-center">
+					<form method="post" role="form">
+					<div class="form-group" id="custom-form-group">
+						<input class="form-control custom-form" type="email" name="email-name" placeholder="i<3buskers@gmail.com" required="required" />
+						<input class="form-control custom-form" type="password" name="p" placeholder="Password" required="required" />
+					</div>
+					</form>
+					<div class="checkbox custom-checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					 <button type="submit" class="btn btn-primary btn-block">Let me in.</button>	
+				</div>	
+			</div>
+			<div class="text-center" id="reglink">
+				<p> Not connected? <a href="register.html">Sign up!</a>
+			</div>
+		</div>
+	</div>	
 <!-- END  L o g i n - S e c t i o n -->	
 	
 <!-- START  R e g i s t e r - S e c t i o n -->	  
@@ -207,7 +203,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-2"></div>
-			<div class="col-md-4 custom-welcome-section">
+			<div class="col-md-4 custom-welcome-section" id="toggle-dev-skills">
 				<h4>Development</h4>
 				<img src="bg/welcome/developer-icon.png" alt="developer-icon" width="200" height="200">
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
@@ -218,8 +214,15 @@
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p></div>
 			<div class="col-md-2"></div>
 		</div>
+		<div class="row" id="our-skills">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circleHTML.png" alt="circleHTML" width="150" height="auto"></div>
+			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circleCSS.png" alt="circleCSS" width="150" height="auto"></div>
+			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circleJS.png" alt="circleJS" width="150" height="auto"></div>
+			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circlePHP.png" alt="circlePHP" width="150" height="auto"></div>
+			<div class="col-md-2"></div>
+		</div>
 	</div>	
-	
 	
 <!-- END  W e l c o m e - S e c t i o n --> 
 	
@@ -425,6 +428,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-4"><button id="btn-events" class="btn btn-info" type="button">See My Events!</button></div>
+					<div class="col-md-8"></div>
+				</div>
 			</div>
 			<div class="col-md-2"></div>
 		</div>
@@ -432,14 +439,17 @@
 	
 		<!-- START  E v e n t - S e c t i o n -->
 		<div class="container" id="profil-section-events">
-			<h4 id="btn-events">Events</h4>
-			<div id="hide-events">
+			
+			
+			<div id="hide-events">	
 				<div class="row">
 					<div class="col-md-4 col-xs-4"><a>Upcomming Events</a></div>
 					<div class="col-md-4 col-xs-4"><a>All Events</a></div>
 					<div class="col-md-2 col-md-offset-2 col-xs-1 col-xs-offset-3"><a><span class="glyphicon glyphicon-remove"></span></a></div>
 				</div>
+				
 				<div class="table-responsive">
+				
 					<table class="table" id="event-tbl">
 						<tr>
 							<td>05/20/15</td>
@@ -514,13 +524,17 @@
 							<td></td>
 						</tr>
 					</table>
+					
 				</div>
-			</div>
+			
 		
-			<article id="profil-section-geo">
-				<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
-				</iframe>
-			</article>	
+				<article id="profil-section-geo">
+					<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
+					</iframe>
+				</article>	
+				
+			</div>
+			
 			<article id="profil-section-video">
 				<iframe width="100%" height="450px" src="https://www.youtube.com/embed/BFy0iWHEo_k" frameborder="0" allowfullscreen></iframe>
 			</article>
@@ -546,6 +560,6 @@
 	<script src="js/jQeasing.js" type="text/javascript"></script>
 
 	<script src="js/navbar.js"></script>
-	<script src="js/event-table.js"></script>
+	<script src="js/hide-show.js"></script>
 </body>
 </html>

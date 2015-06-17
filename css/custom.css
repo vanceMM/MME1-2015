@@ -1,5 +1,5 @@
 /* START css hacks */
-
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 /* to use fonticons from weloveiconfonts */
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 /* entypo */
@@ -106,6 +106,9 @@ a:hover {
 
 
 /* START css header */
+#bg-filter{
+	background-image: linear-gradient(to bottom, #6c5b7b 0%, #34495e 100%);
+}
 .bg-img{
 /*
 	background-image:url(../bg/header/loginscreen.jpg);
@@ -121,9 +124,13 @@ a:hover {
 	top: +75px;	
 */	
 	width:100%;
-	height:650px;
+	height:750px;
+	/* gradiant filter
+	background-image: linear-gradient(to bottom, #6c5b7b 0%, #34495e 100%);
+	*/
 	background-image:url(../bg/header/loginscreen.jpg);
 	background-size:cover;
+	opacity: 0.4;
 }
 
 
@@ -142,7 +149,7 @@ a:hover {
     
     width: 800px;
     padding-top: 10%;
-    opacity: 0.5;
+    opacity: .6;
 }
 /* END css header */
 
@@ -287,4 +294,56 @@ footer p{
 
 .btn {
     border-radius: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
+
+.custom-ourskill{
+	text-align: center;
+}
+
+
+/* START  l o g i n - m o d a l */
+#custom-modal-dialog{
+	margin-top: 150px;
+	color:#ffffff;;
+}
+
+#custom-modal-p{
+	margin: 30px 0 40px 0;
+}
+
+.custom-modal-content{
+	background: rgba(121, 155, 194, 0.21);	
+}
+
+.custom-moda-content h2,p{
+	color:#ffffff;	
+}	
+
+.custom-modal-content>div{
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	border: 0px
+}
+
+.custom-form{
+	margin: 0 0 10px 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 0px;
+	color:white;
+}
+
+.custom-checkbox{
+	color: rgba(182, 175, 175, 0.89);
+}
+
+#reglink{
+	margin-top: 25px;
+}
+
+#reglink a{
+	color:#f19148;
+}
+/* END  l o g i n - m o d a l */
