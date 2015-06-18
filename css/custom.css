@@ -310,15 +310,12 @@ footer p{
 
 #custom-modal-p{
 	margin: 30px 0 40px 0;
+	color:#ffffff;
 }
 
 .custom-modal-content{
 	background: rgba(121, 155, 194, 0.21);	
 }
-
-.custom-moda-content h2,p{
-	color:#ffffff;	
-}	
 
 .custom-modal-content>div{
 	-webkit-border-radius: 0px;
@@ -341,6 +338,9 @@ footer p{
 
 #reglink{
 	margin-top: 25px;
+}
+#reglink p{
+	color:#ffffff;
 }
 
 #reglink a{
