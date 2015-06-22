@@ -46,7 +46,7 @@
 	    </div>
 	  </nav>
 	 
-	 ------------
+	 
 	 
 	  <nav id="navbar">
 	    <div><img src="bg/header/navbar/logginbutton.png" alt="logginbutton" width="25" height="25" onclick="window.location.href='#openModal'"></div>
@@ -63,7 +63,7 @@
 
 <!-- BOOTSTRAP NAVIGATION -->
 	
-	<nav class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+	<nav class="navbar navbar-inverse navbar-fixed-top custom-navbar">
 		<div class="container-fluid">
 		
 		<div class="row">
@@ -76,7 +76,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-				<a class="navbar-brand" href="#">Busker</a>
+				<a class="navbar-brand" id="custom-brand" href="#">Busker</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			
@@ -147,7 +147,7 @@
 						<input class="form-control custom-form" type="password" name="p" placeholder="Password" required="required" />
 					</div>
 					</form>
-					<div class="checkbox custom-checkbox">
+					<div class="checkbox custom-checkbox text-left">
 						<label><input type="checkbox"> Remember me</label>
 					</div>
 				</div>
@@ -189,19 +189,19 @@
 <!-- START  W e l c o m e - S e c t i o n -->
 
 	</div>
-	<div class="container-fluid section-spacer"><h2><a name="welcome">Welcome</a></h2></div>	
+	<div class="container-fluid section-spacer-white text-center" id="section-welcome-header"><h2><a name="welcome">Welcome</a></h2></div>	
 	<h2 class="hidden-titles">welcome</h2>
-	<div class="container-fluid">
+	<div class="container-fluid" id="custom-welcome-body">
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 				</p>
-				<h4>What we do</h4>
+				<h4 class="section-headline">What we do</h4>
 			</div>
 			<div class="col-md-2"></div>
 		</div>
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-md-2"></div>
 			<div class="col-md-4 custom-welcome-section" id="toggle-dev-skills">
 				<h4>Development</h4>
@@ -214,6 +214,7 @@
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p></div>
 			<div class="col-md-2"></div>
 		</div>
+		<!--
 		<div class="row" id="our-skills">
 			<div class="col-md-2"></div>
 			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circleHTML.png" alt="circleHTML" width="150" height="auto"></div>
@@ -222,13 +223,14 @@
 			<div class="col-md-2"><img src="bg/welcome/ourSkills/png/circlePHP.png" alt="circlePHP" width="150" height="auto"></div>
 			<div class="col-md-2"></div>
 		</div>
+		-->
 	</div>	
 	
 <!-- END  W e l c o m e - S e c t i o n --> 
 	
 <!-- START  C o n t a c t - S e c t i o n --> 
 
-	<div class="container-fluid section-spacer"><h2><a name="contact">Contact</a></h2></div>
+	<div class="container-fluid section-spacer-white text-center"><h2><a name="contact">Contact</a></h2></div>
 	<h2 class="hidden-titles">contact</h2>
 	<div class="container-fluid">
 <!-- contact describtion -->
@@ -237,27 +239,27 @@
 			<div class="col-md-8">
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 				</p>
-				<h4>Our Team</h4>
+				<h4 class="section-headline">Our Team</h4>
 			</div>
 			<div class="col-md-2"></div>
 		</div>
 <!-- the team -->
-		<div class="row">
+		<div class="row" id="our-team-section">
 			<div class="col-md-2"></div>
-			<div class="col-md-4 custom-welcome-section">
+			<div class="col-md-4 text-center">
 				<h4>Risch, Valentin</h4>
 				<img src="bg/contact/vale1.png" alt="vale1" width="400" height="auto">
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-				<p id="contact-email"><a href="#">@risch</a></p>
+				<p class="contact-email"><a href="#">@risch</a></p>
 			</div>
-			<div class="col-md-4 custom-welcome-section">
+			<div class="col-md-4 text-center">
 				<h4>Bleckmann, Benjamin</h4>
 				<img src="bg/contact/ben.png" alt="ben" width="400" height="auto">
 				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-				<p id="contact-email"><a href="#">@bleckmann</a></p>
+				<p class="contact-email"><a href="#">@bleckmann</a></p>
 			</div>
 			<div class="col-md-2"></div>
-		</div>
+		</div> 
 <!-- social media icons -->		
 		<div class="row">
 			<div class="col-md-3"></div>
@@ -290,7 +292,7 @@
 
 <!-- START  A r t i s t - S e c t i o n --> 
 
-	<div class="container-fluid section-spacer"><h2><a name="artists">Artists</a></h2></div>
+	<div class="container-fluid section-spacer-dark"><h2><a name="artists">Artists</a></h2></div>
 	<h2 class="hidden-titles">Artists</h2>
 	<div class="container-fluid custom-artist-section">
 		<div class="row">
@@ -390,160 +392,164 @@
 <!-- END  A r t i s t - S e c t i o n -->
 
 <!-- START  P r o f i l - S e c t i o n -->	
-	<div class="container-fluid section-spacer"><h2><a name="profil">Profil</a></h2></div>
+	<div class="container-fluid section-spacer-dark"><h2><a name="profil">Profil</a></h2></div>
 	<h2 class="hidden-titles">Profil</h2>	
-	
+
 	<div class="container-fluid custom-profil-color">
-	<!-- profil avatar, titel, message, social media -->
-		<div class="row costum-profil">
-			<div class="col-md-2"></div>
-			<div class="col-md-3">
-				<img src="bg/artists/artist-selection/profilavatar.jpg" alt="profilavatar" width="300px" height="auto">
-			</div>
-			<div class="col-md-5">
-				<div class="row">
-					<div class="col-md-12">
-						<p>Lorem ipsum</p>
-						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, dolor sit amet.</p>
-					</div>
+		<div class="container ">
+
+			<!-- profil avatar, titel, message, social media -->	
+			<div class="row costum-profil">
+				<!-- avatar -->
+				<div class="col-md-4 text-center">
+					<img src="bg/artists/artist-selection/profilavatar.jpg" alt="profilavatar" width="300px" height="auto">
 				</div>
-				<div class="row">
-					<div class="col-md-8">
-						<button id="profil-message-btn" class="btn btn-success" type="button">message me!</button>
+				<!-- about artist -->
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-12">
+							<p>Lorem ipsum</p>
+							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, dolor sit amet.</p>
+						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="row" id="profil-social-media-icons">
-							<div class="col-md-3">
-								<a href="#" class="entypo-twitter"></a>
-							</div>
-							<div class="col-md-3">
-								<a href="#" class="entypo-pinterest"></a>
-							</div>
-							<div class="col-md-3">
-								<a href="#" class="entypo-facebook"></a>
-							</div>
-							<div class="col-md-3">
-								<a href="#" class="entypo-tumblr"></a>
+					<!-- message & social media -->
+					<div class="row">
+						<div class="col-md-8">
+							<button id="profil-message-btn" class="btn btn-md btn-success" type="button">message me!</button>
+						</div>
+						<!-- social media -->
+						<div class="col-md-4">
+							<div class="row" id="profil-social-media-icons">
+								<div class="col-md-3">
+									<a href="#" class="entypo-twitter"></a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="entypo-pinterest"></a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="entypo-facebook"></a>
+								</div>
+								<div class="col-md-3">
+									<a href="#" class="entypo-tumblr"></a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4"><button id="btn-events" class="btn btn-info" type="button">See My Events!</button></div>
-					<div class="col-md-8"></div>
-				</div>
+					<!-- show events -->
+					<div class="row">
+						<div class="col-md-4"><button id="btn-events" class="btn btn-md btn-info" type="button">See My Events!</button></div>
+						<div class="col-md-8"></div>
+					</div>
+				</div>		
 			</div>
-			<div class="col-md-2"></div>
-		</div>
-		
-	
-		<!-- START  E v e n t - S e c t i o n -->
-		<div class="container" id="profil-section-events">
-			
-			
-			<div id="hide-events">	
-				<div class="row">
-					<div class="col-md-4 col-xs-4"><a>Upcomming Events</a></div>
-					<div class="col-md-4 col-xs-4"><a>All Events</a></div>
-					<div class="col-md-2 col-md-offset-2 col-xs-1 col-xs-offset-3"><a><span class="glyphicon glyphicon-remove"></span></a></div>
-				</div>
 				
-				<div class="table-responsive">
-				
-					<table class="table" id="event-tbl">
-						<tr>
-							<td>05/20/15</td>
-							<td>BER</td>
-							<td>Warschauerstraße</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/23/15</td>
-							<td>BER</td>
-							<td>Mauerpark</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/30/15</td>
-							<td>BER</td>
-							<td>Tempelhof</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/20/15</td>
-							<td>BER</td>
-							<td>Warschauerstraße</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/23/15</td>
-							<td>BER</td>
-							<td>Mauerpark</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/30/15</td>
-							<td>BER</td>
-							<td>Tempelhof</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/20/15</td>
-							<td>BER</td>
-							<td>Warschauerstraße</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/23/15</td>
-							<td>BER</td>
-							<td>Mauerpark</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>05/30/15</td>
-							<td>BER</td>
-							<td>Tempelhof</td>
-							<td>DE</td>
-							<td>W/ n.a.</td>
-							<td></td>
-						</tr>
-					</table>
-					
+			<!-- START  E v e n t - S e c t i o n -->
+			<div class="container" id="profil-section-events">
+				<!-- events and geo map -->
+				<div id="hide-events">	
+					<div class="row" id="hide1">
+						<div class="col-md-4 col-xs-4"><a>Upcomming Events</a></div>
+						<div class="col-md-4 col-xs-4"><a>All Events</a></div>
+						<div class="col-md-2 col-md-offset-2 col-xs-1 col-xs-offset-3">
+							<a><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</div>
+					<!-- event table -->
+					<div class="table-responsive" id="hide2">
+						<table class="table" id="event-tbl">
+							<tr>
+								<td>05/20/15</td>
+								<td>BER</td>
+								<td>Warschauerstraße</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/23/15</td>
+								<td>BER</td>
+								<td>Mauerpark</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/30/15</td>
+								<td>BER</td>
+								<td>Tempelhof</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/20/15</td>
+								<td>BER</td>
+								<td>Warschauerstraße</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/23/15</td>
+								<td>BER</td>
+								<td>Mauerpark</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/30/15</td>
+								<td>BER</td>
+								<td>Tempelhof</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/20/15</td>
+								<td>BER</td>
+								<td>Warschauerstraße</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/23/15</td>
+								<td>BER</td>
+								<td>Mauerpark</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>05/30/15</td>
+								<td>BER</td>
+								<td>Tempelhof</td>
+								<td>DE</td>
+								<td>W/ n.a.</td>
+								<td></td>
+							</tr>
+						</table>	
+					</div>
+					<!-- google maps -->
+					<div id="hide3">
+					<article id="profil-section-geo">
+						<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
+						</iframe>
+					</article>
+					</div>		
 				</div>
-			
-		
-				<article id="profil-section-geo">
-					<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
-					</iframe>
+				<!-- artist video -->
+				<article id="profil-section-video">
+					<iframe width="100%" height="450px" src="https://www.youtube.com/embed/BFy0iWHEo_k" frameborder="0" allowfullscreen></iframe>
 				</article>	
-				
 			</div>
-			
-			<article id="profil-section-video">
-				<iframe width="100%" height="450px" src="https://www.youtube.com/embed/BFy0iWHEo_k" frameborder="0" allowfullscreen></iframe>
-			</article>
+			<!-- END  E v e n t - S e c t i o n -->
 		</div>
-	<!-- END  E v e n t - S e c t i o n -->
 	</div>
 <!-- END  P r o f i l - S e c t i o n -->
-
-<!-- START  F o o t e r - S e c t i o n -->
+	
+	<!-- START  F o o t e r - S e c t i o n -->
 	<div class="container-fluid custom-footer">
 		<footer>
 			<h2 class="hidden-titles">footer</h2> 
@@ -551,15 +557,20 @@
 		</footer>
 	</div>
 <!-- END  F o o t e r - S e c t i o n -->
+<!-- START  s c r i p s  -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 	
+
 	<!-- jQueryEasing Plugin -->
 	<script src="js/jQeasing.js" type="text/javascript"></script>
 
 	<script src="js/navbar.js"></script>
 	<script src="js/hide-show.js"></script>
+	<script src="js/logo.js"></script>
+<!-- END  s c r i p s  -->
 </body>
 </html>

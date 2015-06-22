@@ -1,12 +1,17 @@
-var toggleTable = $('#btn-events');
-var table = $('#hide-events');
 
+//var hide = $('#hide1, #hide2, #hide3');
+var toggleTable = $('#btn-events');
+
+
+var table = $('#hide-events');
+/*
 var ourSkills = $('#our-skills');
 var devSkills = $('#toggle-dev-skills');
+*/
 
 $(document).ready(function(){
 	$("table").hide();
-	$("ourSkills").hide();
+//	$("ourSkills").hide();
 });
 	
 	
@@ -15,8 +20,8 @@ $(toggleTable).click(function(){
 });
 
 
-
+/*
 $(devSkills).click(function(){
 	$("ourSkills").toggle('slow', 'jswing');
 });
-
+*/

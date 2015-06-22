@@ -1,5 +1,5 @@
 $(document).scroll(function(){
-	var navbar = $('.navbar-custom');
+	var navbar = $('.custom-navbar');
 	var scrollTop = $(this).scrollTop();
 	var navbtn = $('#nav-btn'); 
 	if(scrollTop > 10){
