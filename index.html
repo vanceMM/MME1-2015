@@ -23,6 +23,14 @@
 	<!-- less.js einbinden 
 	<script src="js/less.js" type="text/javascript"></script>
 	-->
+
+	<!-- filterisotope.js einbinden -->
+	
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/filter.js"></script>
+	<!-- json table parse -->
+	<script type="text/javascript" src="js/jsonparse.js"></script>
 	
 </head>
 <body>
@@ -301,95 +309,88 @@
 			</div>
 			<div class="col-md-2"></div>
 		</div>
-		<div class="now">
-			<div class="col-md-4"></div>
-			<div class="col-md-1">hyped</div>
-			<div class="col-md-1">all</div>
-			<div class="col-md-1">a-z</div>
-			<div class="col-md-1">new</div>
-			<div class="col-md-4"></div>
+		<div class="row">
+			<ul id="filterOptions">
+			
+			  <li class="active"><a href="#" data-filter="*" class="col-md-1 all">All</a></li>
+			  <li><a href="#" data-filter=".hyped" class="col-md-1 hyped">hyoed</a></li>
+			  <li><a href="#" data-filter=".a-z" class="col-md-1 a-z">a-z</a></li>
+			  <li><a href="#" data-filter=".new_coms" class="col-md-1 new_coms">new_coms</a></li>
+			  <li><button onclick="location.href='/add.html'">
+     add</button></li>
+
+			  
+		</ul>
 		</div>
 	</div>
 	
-	<!--
-	<div class="section-spacer"><h2><a name="artists">Artists</a></h2></div>
-	<h2 class="hidden-titles">Artists</h2>
-	<section id="artist-section">
-	  <div id="artist-selection">
-	    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-	    <nav>
-	      <div>hyped</div>
-	      <div>all</div>
-	      <div>a-z</div>
-	      <div>new coms</div>
-	    </nav>
-	  </div>
-	  <section>
-	    <ul class="grid cs-style-3">
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1115960-Music">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1116775-Safari">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1117308-Phone">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	        <li>
-	          <figure>
-	            <img src="bg/artists/artist-selection/whack.jpg" alt="whack">
-	            <figcaption>
-	              <h3>Artist</h3>
-	              <span>Jacob Cummings</span>
-	              <a href="http://dribbble.com/shots/1118904-Game-Center">Take a look</a>
-	            </figcaption>
-	          </figure>
-	        </li>
-	      </ul>
-	  </section>
+	<section id="artist-flex-box">
+		<div class="flex-container">
+			<ul class="grid cs-style-3" id="ourHolder">
+				<li class="hyped a-z new_coms">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1116685-Settings">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="hyped a-z">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="hyped a-z">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1115960-Music">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="new_coms a-z">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1116775-Safari">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="new_coms a-z">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1117308-Phone">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="hyped new_coms a-z">
+					<figure>
+						<img src="bg/artists/artist-selection/whack.jpg" alt="whack">
+						<figcaption>
+							<h3>Artist</h3>
+							<span>Jacob Cummings</span>
+							<a href="http://dribbble.com/shots/1118904-Game-Center">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
 	</section>
-<!-- END  A r t i s t - S e c t i o n -->
+
 
 <!-- START  P r o f i l - S e c t i o n -->	
 	<div class="container-fluid section-spacer-dark"><h2><a name="profil">Profil</a></h2></div>
@@ -457,7 +458,7 @@
 					<!-- event table -->
 					<div class="table-responsive" id="hide2">
 						<table class="table" id="event-tbl">
-							<tr>
+							<!--<tr>
 								<td>05/20/15</td>
 								<td>BER</td>
 								<td>Warschauerstraße</td>
@@ -528,7 +529,7 @@
 								<td>DE</td>
 								<td>W/ n.a.</td>
 								<td></td>
-							</tr>
+							</tr>-->
 						</table>	
 					</div>
 					<!-- google maps -->
@@ -559,7 +560,10 @@
 <!-- END  F o o t e r - S e c t i o n -->
 <!-- START  s c r i p s  -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
+	<!--<script type="text/javascript" src="js/slider.js"></script> -->
+	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
 	
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
