@@ -9,7 +9,9 @@ $sql = 'INSERT INTO Events SET  date = :datum,
                               city = :city,
                               location = :location,
                               country = :country,
-                              feat = :feat;';
+                              feat = :feat,
+                              artist = artist,
+                              time = time;';
 
 $s = $pdo->prepare($sql);
 $s->bindValue(':datum', $_POST['datum']);
@@ -17,6 +19,8 @@ $s->bindValue(':city', $_POST['city']);
 $s->bindValue(':location', $_POST['location']);
 $s->bindValue(':country', $_POST['country']);
 $s->bindValue(':feat', $_POST['feat']);
+$s->bindValue(':artist', $_POST['artist']);
+$s->bindValue(':time', $_POST['time']);
 $s->execute();
 $response = array('message' => 'insert done');
 } catch (PDOException $e){
