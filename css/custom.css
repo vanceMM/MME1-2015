@@ -191,7 +191,16 @@ a:hover {
 }
 
 .custom-btn{
+	color:#34495e;
 	padding: 5px 25px; 
+	background-color: white;
+	border-color: #34495e;
+	border: 2px solid;
+	border-radius: 15px;
+}
+
+.custom-btn{
+	
 }
 /* END  S E C T I O N - S P A C E R */
 
@@ -339,10 +348,15 @@ footer p{
 }
 
 
+
+
 .btn {
     border-radius: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+
 
 .custom-ourskill{
 	text-align: center;
