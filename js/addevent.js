@@ -1,6 +1,11 @@
 // magic.js
 $(document).ready(function() {
 
+    // datepicker
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+
     // process the form
     $('form').submit(function(event) {
 
