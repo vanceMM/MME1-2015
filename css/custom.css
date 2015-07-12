@@ -224,7 +224,8 @@ a:hover {
 
 /* START  C o n t a c t - S e c t i o n */
 .social-media-icons{
-	text-align: center; 
+	margin-bottom: 50px;
+	text-align: center;  
 }
 
 .contact-email{
