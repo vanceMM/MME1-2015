@@ -1,0 +1,64 @@
+<!-- index.html -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Look I'm AJAXing!</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> <!-- load bootstrap via CDN -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> <!-- load jquery via CDN -->
+    <script src="js/addevent.js"></script> <!-- load our javascript file -->
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+</head>
+<body>
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1>Processing an AJAX Form</h1>
+
+    <!-- OUR FORM -->
+    <form action="process.php" method="POST">
+        
+
+        <!-- DATE -->
+        <div id="datum-group" class="form-group">
+            <label for="datum">Datum</label>
+            <input type="text" class="form-control" name="datum" placeholder="MM/DD/YYYY" id="datepicker">
+            <!-- errors will go here -->
+        </div>
+
+        <!-- CITY -->
+        <div id="city-group" class="form-group">
+            <label for="city">Stadt</label>
+            <input type="text" class="form-control" name="city" placeholder="Stadt">
+            <!-- errors will go here -->
+        </div>
+
+         <!-- LOCATION -->
+        <div id="location-group" class="form-group">
+            <label for="location">Adresse</label>
+            <input type="text" class="form-control" name="location" placeholder="Stadt">
+            <!-- errors will go here -->
+        </div>
+
+         <!-- COUNTRY -->
+        <div id="country-group" class="form-group">
+            <label for="country">Land</label>
+            <input type="text" class="form-control" name="country" placeholder="Stadt">
+            <!-- errors will go here -->
+        </div>
+
+         <!-- FEAT -->
+        <div id="feat-group" class="form-group">
+            <label for="feat">feat</label>
+            <input type="text" class="form-control" name="feat" placeholder="Stadt">
+            <!-- errors will go here -->
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
+
+    </form>
+
+</div>
+</body>
+</html>
