@@ -34,11 +34,12 @@
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/filterisotope.js"></script>
 	<!-- json table parse -->
-	<script type="text/javascript" src="js/jsonparse.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRtVtLoeVk_m096G_w82y8mHU89ZbT2bk"></script>
+	<script src="js/jquery_ajax_table.js"></script>
 	<script type="text/javascript" src="js/gmaps.js"></script>
 	<script type="text/javascript" src="js/map.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRtVtLoeVk_m096G_w82y8mHU89ZbT2bk"></script>
 	<script src="js/addevent.js"></script>
+
 	
 </head>
 <body>
@@ -325,18 +326,17 @@
 			  <li><a href="#" data-filter=".hyped" class="col-md-1 hyped">hyoed</a></li>
 			  <li><a href="#" data-filter=".a-z" class="col-md-1 a-z">a-z</a></li>
 			  <li><a href="#" data-filter=".new_coms" class="col-md-1 new_coms">new_coms</a></li>
-			  <li><button onclick="location.href='/add.html'">
-     add</button></li>
+			  
 
 			  
 		</ul>
 
-			<div class="col-md-4"></div>
+			<!--<div class="col-md-4"></div>
 			<div class="col-md-1">hyped</div>
 			<div class="col-md-1">all</div>
 			<div class="col-md-1">a-z</div>
 			<div class="col-md-1">new</div>
-			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>-->
 
 		</div>
 	</div>
@@ -475,78 +475,7 @@
 					<!-- event table -->
 					<div class="table-responsive" id="hide2">
 						<table class="table" id="event-tbl">
-							<!--<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>-->
+							<!-- ajax call content goes here -->
 						</table>	
 					</div>
 					<!-- google maps -->
@@ -578,28 +507,35 @@
 			<p id="custom-modal-p">At vero eos et accusamus et iusto dignissimos.</p>
 		</div>
 	    	<!-- Modal content --> 
-		    <div class="modal-content custom-modal-content">
+		    <div class="modal-content custom-modal-content" id="modal-form">
 				<div class="modal-header">
 				
 				</div>
 				<div class="modal-body text-center">
-					<form action="process.php" method="POST" id="event-form" role="form">
+					<form action="process.php" method="POST" id="event-form" role="form" >
 							<div class="form-group" id="custom-form-group">
 								<input class="form-control custom-form" id="datum" type="date" name="datum" placeholder="" required="required" />
-								<input class="form-control custom-form" id="city" type="text" name="city-name" placeholder="City" required="required" />
-								<input class="form-control custom-form" id="location" type="text" name="location-name" placeholder="Location" required="required" />
-								<input class="form-control custom-form" id="country"type="text" name="country-name" placeholder="Country" required="required" />
-								<input class="form-control custom-form" id="feat" type="text" name="with-name" placeholder="playing with?" />
-								<input class="form-control custom-form" id="artist" type="text" name="artist-name" placeholder="artist" />
-								<input class="form-cpntrol custom-form" id="time" type="time" name="time-name" placeholder="time" />
-								<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
-								</iframe>
-								<div id="geolocation_map"></div>
+								<input class="form-control custom-form" id="city" type="text" name="city" placeholder="City" required="required" />
+								<input class="form-control custom-form" id="location" type="text" name="location" placeholder="Location" required="required" />
+								<script>
+								$(function() {	
+									$('#location').on('focusout', function() {});
+								});
+									</script>
+								<input class="form-control custom-form" id="country"type="text" name="country" placeholder="Country" required="required" />
+								<input class="form-control custom-form" id="feat" type="text" name="feat" placeholder="playing with?" />
+								<input class="form-control custom-form" id="artist" type="text" name="artist" placeholder="artist" />
+								<!--<input class="form-cpntrol custom-form" id="time" type="time" name="time-name" placeholder="time" />-->
+								<!--<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
+								</iframe>-->
+							<div id="geolocation_map" style="height: 200px;"></div>
 							</div>
-							<button type="submit" class="btn btn-primary btn-block">Yay! A New Event!</button>
-					 <button type="button" class="btn btn-danger">Cancel</button>
+							<button type="submit"  class="btn btn-primary btn-block"  id="submit-button">Yay! A New Event!</button>
+
+					 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 							
 					</form>
+					
 					<!--
 					<div class="checkbox custom-checkbox text-left">
 						<label><input type="checkbox"> Remember me</label>

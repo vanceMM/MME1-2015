@@ -17,7 +17,7 @@ function myFunction(response) {
 
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
-        arr[i].date +
+        arr[i].datum +
         "</td><td>" +
         arr[i].city +
         "</td><td>" +
@@ -26,8 +26,13 @@ function myFunction(response) {
         arr[i].country +
          "</td><td>" +
         arr[i].feat +
+        "</td><td>" +
+        arr[i].artist +
         "</td></tr>";
+        
     }
     
+    console.log(out);
+
     document.getElementById("event-tbl").innerHTML = out;
 }
