@@ -1,25 +1,41 @@
+
+
 $(document).ready(function(){
 
-        $(document).ready(function(){
-			var url="events.php";
-				$("#event-table").html("");
-				$.getJSON(url,function(data){
-          console.log(data);
-				$.each(data, function(i,eventitem){
-					var newRow =
-					"<tr>"
-					+"<td>"+data.datum+"</td>"
-					+"<td>"+data.city+"</td>"
-					+"<td>"+data.location+"</td>"
-					+"<td>"+data.country+"</td>"
-					+"<td>"+data.feat+"</td>"
-					+"<td>"+data.artist+"</td>"
-					+"</tr>"
-
-					$(newRow).appendTo("#event-table");
-				});
-			});
-		});
+  // $.get( "events.php", function( data ) {
+  //   console.log(data);
+  //
+  //   // var tr;
+  //   //     for (var i = 0; i < data.length; i++){
+  //   //
+  //   //       tr = $('<tr/>');
+  //   //       tr.append("<td id='datum'>" + data[i].datum + "</td>");
+  //   //       tr.append("<td id='city'>" + data[i].city + "</td>");
+  //   //       tr.append("<td id='location'>" + data[i].location + "</td>");
+  //   //       tr.append("<td id='country'>" + data[i].country + "</td>");
+  //   //       tr.append("<td id='feat'>" + data[i].feat + "</td>");
+  //   //       tr.append("<td id='artist'>" + data[i].artist + "</td>");
+  //   //       $('#event-table').append(tr);
+  //   //     }
+  // });
 
 
+  $.getJSON("events.php",function(data){
+    console.log(data);
+    var tr;
+          for (var i = 1; i < data.length; i++){
+            tr = $('<tr/>');
+            tr.append("<td id='datum'>" + data[i].datum + "</td>");
+            tr.append("<td id='city'>" + data[i].city + "</td>");
+            tr.append("<td id='location'>" + data[i].location + "</td>");
+            tr.append("<td id='country'>" + data[i].country + "</td>");
+            tr.append("<td id='feat'>" + data[i].feat + "</td>");
+            tr.append("<td id='artist'>" + data[i].artist + "</td>");
+            $('#event-tbl').append(tr);
+          }
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+  });
 });

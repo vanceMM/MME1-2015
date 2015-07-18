@@ -1,51 +1,45 @@
 <?php
-
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
-
-$mysqli = new mysqli("localhost", "root", "", "events");
-
-if ($mysqli->connect_errno) {
- 	  http_response_code(400); // Bad Request
-    die(
-      json_encode(
-      	array("error" => "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error)
-        )
-    );
-}
-
-//$result = $mysqli->query("SELECT `datum`, `city`, `location`, `country`, `feat`, `artist` FROM `Events`");
-$result = $mysqli->query("SELECT * FROM Events");
-if (!$result) {
-  http_response_code(400); // Bad Request
-    die(
-      json_encode(
-      	array("error" => "Failed to execute mysql statement: " . $mysqli->error)
-        )
-    );
-}
-
-// $outp = "[";
-// while($rs = $result->fetch_assoc()) {
-//     if ($outp != "[") {$outp .= ",";}
-//     $outp .= '{"datum":"'  . $rs["datum"] . '",';
-//     $outp .= '"city":"'   . $rs["city"]        . '",';
-//     $outp .= '"location":"'   . $rs["location"]        . '",';
-//     $outp .= '"country":"'   . $rs["country"]        . '",';
-//     $outp .= '"feat":"'   . $rs["feat"]        . '",';
-//     $outp .= '"artist":"'. $rs["artist"]     . '"}';
+// //PDO is a extension which  defines a lightweight, consistent interface for accessing databases in PHP.
+// $db=new PDO('mysql:dbname=events;host=localhost;','root','root');
+// //here prepare the query for analyzing, prepared statements use less resources and thus run faster
+// $row=$db->prepare('select * from Events');
+//
+// $row->execute();//execute the query
+// $json_data=array();//create the array
+// foreach($row as $rec)//foreach loop
+// {
+//
+//     $json_array['datum']=$rec['datum'];
+//     $json_array['city']=$rec['city'];
+//     $json_array['location']=$rec['location'];
+//     $json_array['country']=$rec['country'];
+//     $json_array['feat']=$rec['feat'];
+//     $json_array['artist']=$rec['artist'];
+//
+// //here pushing the values in to an array
+//     array_push($json_data,$json_array);
+//
 // }
-// $outp .="]";
+// echo ($json_array);
+// //built in PHP function to encode the data in to JSON format
+// echo json_encode($json_data);
 
-$emparray[] = array();
-    while($row =mysqli_fetch_assoc($result))
-    {
-        $emparray[] = $row;
-    }
-    echo json_encode($emparray);
+//open connection to mysql db
+   $connection = mysqli_connect("localhost","root","root","events") or die("Error " . mysqli_error($connection));
 
-$mysqli->close();
+   //fetch table rows from mysql db
+   $sql = "select * from Events";
+   $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
-echo($emparray);
+   //create an array
+   $emparray[] = array();
+   while($row =mysqli_fetch_assoc($result))
+   {
+       $emparray[] = $row;
+   }
+   echo json_encode($emparray);
+
+   //close the db connection
+   mysqli_close($connection);
 
 ?>
