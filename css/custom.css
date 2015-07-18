@@ -429,12 +429,17 @@ a:hover {
 
 
 /* START  P r o f i l - S e c t i o n */
+
+.section-profil-header{
+	margin-top: 75px;
+}
+
 .custom-profil-color{
 	background-color:#2c3e50;
 }
 
 .costum-profil p{
-    	color:#fff;
+    color:#fff;
 }
 
 #profil-section-events h4{
@@ -593,3 +598,10 @@ footer p{
 	color:#f19148;
 }
 /* END  m o d a l s  */
+
+
+.register-form{
+	margin: 5px 0;
+}
+
+#register-Btn{margin-top: 15px;}
