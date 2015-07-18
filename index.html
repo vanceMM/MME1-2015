@@ -5,28 +5,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	
+
 	<meta name="description" content="we love every art, especially street art">
 	<meta name="author" content="busker">
 	<title> "Busker" </title>
-    
-	
+
+
 	<!-- Bootstrap css einbinden -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<!-- custom css einbinden -->
 	<link href="css/custom.css" rel="stylesheet">
-	
+
 	<!-- less.css einbinden -->
 	<link href="less/style.less" rel="stylesheet/less" type="text/css">
-	
-	<!-- less.js einbinden 
+
+	<!-- less.js einbinden
 	<script src="js/less.js" type="text/javascript"></script>
 	-->
 
 	<!-- filterisotope.js einbinden -->
-	
-	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
+
+	<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 
 	<!--<script type="text/javascript" src="js/slider.js"></script> -->
 	<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
@@ -34,8 +34,13 @@
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/filterisotope.js"></script>
 	<!-- json table parse -->
-	<script type="text/javascript" src="js/jsonparse.js"></script>
-	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRtVtLoeVk_m096G_w82y8mHU89ZbT2bk"></script>
+	<script src="js/jquery_ajax_table.js"></script>
+	<script type="text/javascript" src="js/gmaps.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script src="js/addevent.js"></script>
+
+
 </head>
 <body>
 	<header>
@@ -51,22 +56,22 @@
 	    <div><img src="bg/header/navbar/triangle1.png" alt="triangle" width="25px" height="25px"></div>
 	    <div><a href="">Add</a></div>
 	    <div><a href="#contact">Contact</a></div>
-	  </nav> 
-	  <nav id="navbar-right"  
+	  </nav>
+	  <nav id="navbar-right"
 	    <div id="searchbar"><form method="get" action="/search" id="search">
 	      <input name="q" type="text" size="40" placeholder="Search..." /></form>
 	    </div>
 	  </nav>
-	 
-	 
-	 
+
+
+
 	  <nav id="navbar">
 	    <div><img src="bg/header/navbar/logginbutton.png" alt="logginbutton" width="25" height="25" onclick="window.location.href='#openModal'"></div>
 	    <div><a href="#welcome">Welcome</a></div>
 	    <div><a href="artist.html">Artists</a></div>
 	    <div><img src="bg/header/navbar/triangle1.png" alt="triangle" width="25px" height="25px"></div>
 	    <div><a href="add.html">Add</a></div>
-	    <div><a href="#contact">Contact</a></div> 
+	    <div><a href="#contact">Contact</a></div>
 	    <div id="searchbar"><form method="get" action="/search" id="search">
 	      <input name="q" type="text" size="40" placeholder="Search..." /></form>
 	    </div>
@@ -74,10 +79,10 @@
 	  -->
 
 <!-- BOOTSTRAP NAVIGATION -->
-	
+
 	<nav class="navbar navbar-inverse navbar-fixed-top custom-navbar">
 		<div class="container-fluid">
-		
+
 		<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
@@ -86,37 +91,37 @@
 					<!-- button lines -->
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>                        
+					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" id="custom-brand" href="#">Busker</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
-			
+
 				<form class="navbar-form navbar-left">
 					<div>
-						<button type="submit" class="btn btn-info" id="nav-btn"><i class="glyphicon glyphicon-search"></i></button> 
+						<button type="submit" class="btn btn-info" id="nav-btn"><i class="glyphicon glyphicon-search"></i></button>
 					<!--
-						<input type="search" class="form-control pull-left"> 
+						<input type="search" class="form-control pull-left">
 					-->
 					</div>
 				</form>
-			<!--	
-				<div class="navbar-form navbar-left">		
+			<!--
+				<div class="navbar-form navbar-left">
 					<div id="searchbar"><form method="get" action="/search" id="search">
 						<input name="q" type="text" size="40" placeholder="Search..." /></form>
-					</div>	
-				</div>    
+					</div>
+				</div>
 				<ul class="nav navbar-nav" id="custom-navbar-items">
 					<li><a href="#">Welcome</a></li>
 					<li><a href="#">Artists</a></li>
-					<li><a href="#">Events</a></li> 
-					<li><a href="#">Contact</a></li> 
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Contact</a></li>
 				</ul>
 				-->
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#welcome">Welcome</a></li>
 					<li><a href="#artist">Artists</a></li>
-					<li><a href="#">Events</a></li> 
+					<li><a href="#">Events</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li><a id="navbar-separator"><img src="bg/header/navbar/separator.png" width="auto" height="40px"></a></li>
 					<li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span></a></li>
@@ -126,20 +131,20 @@
 		<div class="col-md-2"></div>
 		</div>
 	</nav>
-	
-<!-- END  N a v i g a t i o n - S e c t i o n --> 
+
+<!-- END  N a v i g a t i o n - S e c t i o n -->
 	</header>
 	<div id="bg-filter">
-		<div class="bg-img">	
+		<div class="bg-img">
 			<div class="span3"></div>
-			<div class="span6">		
+			<div class="span6">
 			 <img class="center-block" id="logo-font"src="bg/header/logofont1.png" alt="logofont">
 			</div>
-			<div class="span3"></div>	
+			<div class="span3"></div>
 		</div>
-	</div>	
-		
-<!-- START  L o g i n / R e g i s t e r - S e c t i o n -->	
+	</div>
+
+<!-- START  L o g i n / R e g i s t e r - S e c t i o n -->
 	<!-- Modal -->
 	<div id="loginModal" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-sm" id="custom-loginModal-dialog">
@@ -147,7 +152,7 @@
 			<h3>Sign In</h3>
 			<p id="custom-modal-p">At vero eos et accusamus et iusto dignissimos.</p>
 		</div>
-	    	<!-- Modal content --> 
+	    	<!-- Modal content -->
 		    <div class="modal-content custom-modal-content">
 				<div class="modal-header">
 				<!-- <a><span class="glyphicon glyphicon-remove"></span></a> -->
@@ -164,17 +169,17 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					 <button type="submit" class="btn btn-primary btn-block">Let me in.</button>	
-				</div>	
+					 <button type="submit" class="btn btn-primary btn-block">Let me in.</button>
+				</div>
 			</div>
 			<div class="text-center" id="reglink">
 				<p> Not connected? <a href="register.html">Sign up!</a>
 			</div>
 		</div>
-	</div>	
-<!-- END  L o g i n - S e c t i o n -->	
-	
-<!-- START  R e g i s t e r - S e c t i o n -->	  
+	</div>
+<!-- END  L o g i n - S e c t i o n -->
+
+<!-- START  R e g i s t e r - S e c t i o n -->
 
 	<!--
 	  <div id="register-section">
@@ -189,19 +194,19 @@
 	          <input type="text" name="lastname" placeholder="Your Last Name?" />
 	          <input type="text" name="gender" placeholder="Male or Female?" />
 	          <input type="file" name="avatar" accept="image/*;capture=camera" placeholder="Pictore of You?"/>
-	          
+
 	          <button type="submit" class="btn btn-primary btn-block btn-large">Do It!</button>
-	          
+
 	      </form>
-	  </div> 
-	--> 
-	
-<!-- END  R e g i s t e r - S e c t i o n -->	  	
-	
+	  </div>
+	-->
+
+<!-- END  R e g i s t e r - S e c t i o n -->
+
 <!-- START  W e l c o m e - S e c t i o n -->
 
 	</div>
-	<div class="container-fluid section-spacer-white text-center" id="section-welcome-header"><h2><a name="welcome">Welcome</a></h2></div>	
+	<div class="container-fluid section-spacer-white text-center" id="section-welcome-header"><h2><a name="welcome">Welcome</a></h2></div>
 	<h2 class="hidden-titles">welcome</h2>
 	<div class="container-fluid" id="custom-welcome-body">
 		<div class="row">
@@ -236,11 +241,11 @@
 			<div class="col-md-2"></div>
 		</div>
 		-->
-	</div>	
-	
-<!-- END  W e l c o m e - S e c t i o n --> 
-	
-<!-- START  C o n t a c t - S e c t i o n --> 
+	</div>
+
+<!-- END  W e l c o m e - S e c t i o n -->
+
+<!-- START  C o n t a c t - S e c t i o n -->
 
 	<div class="container-fluid section-spacer-white text-center"><h2><a name="contact">Contact</a></h2></div>
 	<h2 class="hidden-titles">contact</h2>
@@ -271,8 +276,8 @@
 				<button class="btn-md btn-success custom-btn" type="button">@bleckmann</button>
 			</div>
 			<div class="col-md-2"></div>
-		</div> 
-<!-- social media icons -->		
+		</div>
+<!-- social media icons -->
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
@@ -302,7 +307,7 @@
 	</div>
 <!-- END  C o n t a c t - S e c t i o n -->
 
-<!-- START  A r t i s t - S e c t i o n --> 
+<!-- START  A r t i s t - S e c t i o n -->
 
 	<div class="container-fluid section-spacer-dark"><h2><a name="artists">Artists</a></h2></div>
 	<h2 class="hidden-titles">Artists</h2>
@@ -316,27 +321,26 @@
 		<div class="row">
 
 			<ul id="filterOptions">
-			
+
 			  <li class="active"><a href="#" data-filter="*" class="col-md-1 all">All</a></li>
 			  <li><a href="#" data-filter=".hyped" class="col-md-1 hyped">hyoed</a></li>
 			  <li><a href="#" data-filter=".a-z" class="col-md-1 a-z">a-z</a></li>
 			  <li><a href="#" data-filter=".new_coms" class="col-md-1 new_coms">new_coms</a></li>
-			  <li><button onclick="location.href='/add.html'">
-     add</button></li>
 
-			  
+
+
 		</ul>
 
-			<div class="col-md-4"></div>
+			<!--<div class="col-md-4"></div>
 			<div class="col-md-1">hyped</div>
 			<div class="col-md-1">all</div>
 			<div class="col-md-1">a-z</div>
 			<div class="col-md-1">new</div>
-			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>-->
 
 		</div>
 	</div>
-	
+
 	<section id="artist-flex-box">
 		<div class="flex-container">
 			<ul class="grid cs-style-3" id="ourHolder">
@@ -405,14 +409,14 @@
 	</section>
 
 
-<!-- START  P r o f i l - S e c t i o n -->	
+<!-- START  P r o f i l - S e c t i o n -->
 	<div class="container-fluid section-spacer-dark"><h2><a name="profil">Profil</a></h2></div>
-	<h2 class="hidden-titles">Profil</h2>	
+	<h2 class="hidden-titles">Profil</h2>
 
 	<div class="container-fluid custom-profil-color">
 		<div class="container section-profil-header">
 
-			<!-- profil avatar, titel, message, social media -->	
+			<!-- profil avatar, titel, message, social media -->
 			<div class="row costum-profil">
 				<!-- avatar -->
 				<div class="col-md-4 text-center">
@@ -458,12 +462,13 @@
 						<div class="col-md-4"><button class="btn btn-info btn-md" type="button"><a href="#" data-toggle="modal" data-target="#eventModal_add">add Event</a></button></div>
 						<div class="col-md-8"></div>
 				</div>		
+				</div>
 			</div>
-				
+
 			<!-- START  E v e n t - S e c t i o n -->
 			<div class="container" id="profil-section-events">
 				<!-- events and geo map -->
-				<div id="hide-events">	
+				<div id="hide-events">
 					<div class="row" id="hide1">
 						<div class="col-md-4 col-xs-4"><a>Upcomming Events</a></div>
 						<div class="col-md-4 col-xs-4"><a>All Events</a></div>
@@ -474,79 +479,8 @@
 					<!-- event table -->
 					<div class="table-responsive" id="hide2">
 						<table class="table" id="event-tbl">
-							<!--<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/20/15</td>
-								<td>BER</td>
-								<td>Warschauerstraße</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/23/15</td>
-								<td>BER</td>
-								<td>Mauerpark</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>05/30/15</td>
-								<td>BER</td>
-								<td>Tempelhof</td>
-								<td>DE</td>
-								<td>W/ n.a.</td>
-								<td></td>
-							</tr>-->
-						</table>	
+							<!-- ajax call content goes here -->
+						</table>
 					</div>
 					<!-- google maps -->
 					<div id="hide3">
@@ -554,20 +488,18 @@
 						<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
 						</iframe>
 					</article>
-					</div>		
+					</div>
 				</div>
 				<!-- artist video -->
 				<article id="profil-section-video">
 					<iframe width="100%" height="450px" src="https://www.youtube.com/embed/BFy0iWHEo_k" frameborder="0" allowfullscreen></iframe>
-				</article>	
+				</article>
 			</div>
 			<!-- END  E v e n t - S e c t i o n -->
 		</div>
 	</div>
 	<!--  START  E v e n t - M o d a l s  -->
-	
-	
-	
+
 	<!-- Add -->
 	<div id="eventModal_add" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-md" id="custom-modal-dialog">
@@ -575,45 +507,56 @@
 			<h3>Add Event</h3>
 			<p id="custom-modal-p">At vero eos et accusamus et iusto dignissimos.</p>
 		</div>
-	    	<!-- Modal content --> 
-		    <div class="modal-content custom-modal-content">
+	    	<!-- Modal content -->
+		    <div class="modal-content custom-modal-content" id="modal-form">
 				<div class="modal-header">
-				
+
 				</div>
 				<div class="modal-body text-center">
-					<form method="post" role="form">
+					<form action="process.php" method="POST" id="event-form" role="form" >
 							<div class="form-group" id="custom-form-group">
-								<input class="form-control custom-form" type="date" name="date" placeholder="" required="required" />
-								<input class="form-control custom-form" type="text" name="city-name" placeholder="City" required="required" />
-								<input class="form-control custom-form" type="text" name="location-name" placeholder="Location" required="required" />
-								<input class="form-control custom-form" type="text" name="country-name" placeholder="Country" required="required" />
-								<input class="form-control custom-form" type="text" name="with-name" placeholder="playing with?" />
-								<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
-								</iframe>
+								<input class="form-control custom-form" id="datum" type="date" name="datum" placeholder="" required="required" />
+								<input class="form-control custom-form" id="city" type="text" name="city" placeholder="City" required="required" />
+								<input class="form-control custom-form" id="location" type="text" name="location" placeholder="Location" required="required" />
+								<script>
+								$(function() {
+									$('#location').on('focusout', function() {});
+								});
+									</script>
+								<input class="form-control custom-form" id="country"type="text" name="country" placeholder="Country" required="required" />
+								<input class="form-control custom-form" id="feat" type="text" name="feat" placeholder="playing with?" />
+								<input class="form-control custom-form" id="artist" type="text" name="artist" placeholder="artist" />
+								<!--<input class="form-cpntrol custom-form" id="time" type="time" name="time-name" placeholder="time" />-->
+								<!--<iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19422.25758591524!2d13.404513914349177!3d52.51928059053577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1397683829953" width="100%" height="250px" frameborder="0" style="border:0">
+								</iframe>-->
+							<div id="geolocation_map" style="height: 200px;"></div>
 							</div>
-							
+							<button type="submit"  class="btn btn-primary btn-block"  id="submit-button">Yay! A New Event!</button>
+
+					 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
 					</form>
+
 					<!--
 					<div class="checkbox custom-checkbox text-left">
 						<label><input type="checkbox"> Remember me</label>
 					-->
-					<button type="submit" class="btn btn-primary btn-block">Yay! A New Event!</button>
-					 <button type="button" class="btn btn-danger">Cancel</button>
+
 					</div>
 				</div>
 				<div class="modal-footer">
-					 
-				</div>	
+
+				</div>
 			</div>
 		</div>
-	</div>	
-	<!-- END  E v e n t - M o d a l  -->	
+	</div>
+	<!-- END  E v e n t - M o d a l  -->
 <!-- END  P r o f i l - S e c t i o n -->
-	
+
 	<!-- START  F o o t e r - S e c t i o n -->
 	<div class="container-fluid custom-footer">
 		<footer>
-			<h2 class="hidden-titles">footer</h2> 
+			<h2 class="hidden-titles">footer</h2>
 			<p>© Copyright 2015 by Busker. All Rights Reserved.</p>
 		</footer>
 	</div>
@@ -622,10 +565,10 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 
-	
+
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
-	
+
 
 	<!-- jQueryEasing Plugin -->
 	<script src="js/jQeasing.js" type="text/javascript"></script>

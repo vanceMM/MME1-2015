@@ -502,6 +502,9 @@ a:hover {
 .custom-artist-section{
 	text-align: center;
 }
+/* START g o o g l e m a p s*/
+
+/* END g o o g l e m a p s*/
 /* START  f o o t e r  */
 .custom-footer{
 	padding: 0 0;
@@ -596,6 +599,11 @@ footer p{
 
 #reglink a{
 	color:#f19148;
+}
+
+#geolocation_map{
+	height: 250px !important;
+	width: 568px !important;
 }
 /* END  m o d a l s  */
 
