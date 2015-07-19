@@ -89,9 +89,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   switch ($_GET['action']) {
     case 'getall': // GETALL ***************************************************************
     try {
-      $result = $pdo->query('SELECT * FROM user');
+      $result = $pdo->query('SELECT * FROM Events');
     } catch (PDOException $e) {
-      $error = 'QUERY ERROR: SELECT * FROM user: ' . $e->getMessage();
+      $error = 'QUERY ERROR: SELECT * FROM Events: ' . $e->getMessage();
       $response = array('databaseError' => $error);
       $json = json_encode($response);
       echo $json;
@@ -101,15 +101,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $error = 'no records found';
       $response = array('databaseError' => $error);
     }
-    $users = array();
+    $events = array();
     foreach ($result as $row) {
-      $users[] = array('id' => $row['id'],
-      'firstname' => $row['firstname'],
-      'secondname' => $row['secondname'],
-      'email' => $row['email'],
-      'password' => $row['password']);
+      $events[] = array('id' => $row['id'],
+      'datum' => $row['datum'],
+      'city' => $row['city'],
+      'location' => $row['location'],
+      'country' => $row['country'],
+    'feat' => $row['feat'],
+  'artist' => $row['artist']);
     }
-    $json = json_encode($users);
+    $json = json_encode($events);
     echo $json;
     break;
   }
