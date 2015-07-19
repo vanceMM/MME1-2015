@@ -37,6 +37,10 @@ $(document).scroll(function(){
 	}
 });
 */
+
+
+
+
 $(document).ready(function(){
 // hide searchfield
 	var searchField = $('#id_search-field');
