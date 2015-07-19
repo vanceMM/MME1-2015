@@ -17,12 +17,12 @@
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-* { 
-	-webkit-box-sizing:border-box; 
-	-moz-box-sizing:border-box; 
-	-ms-box-sizing:border-box; 
-	-o-box-sizing:border-box; 
-	box-sizing:border-box; 
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 /* END css hacks */
@@ -57,7 +57,7 @@ a:link, a:visited, a:active {
 a:hover {
     color: #ffffff;
     text-decoration: none;
-    background-color: #34495e;    
+    background-color: #34495e;
 }
 /* END links */
 
@@ -86,11 +86,11 @@ a:hover {
   	font-size: 1.1em;
 }
 .navbar-inverse .navbar-nav>li>a:hover{
-  	
+
 }
 
 #custom-navbar-items>li>a{
-	
+
 }
 
 #navbar-separator{
@@ -114,7 +114,7 @@ a:hover {
 /* START css header */
 #bg-filter{
 	background-image: linear-gradient(to bottom, #6c5b7b 0%, #34495e 100%);
-	
+
 }
 .bg-img{
 /*
@@ -125,11 +125,11 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	left: 0;
-	
+
 	right: 0;
 	z-index: 1;
-	top: +75px;	
-*/	
+	top: +75px;
+*/
 	width:100%;
 	height:750px;
 	/* gradiant filter
@@ -149,11 +149,11 @@ a:hover {
 	top: 50%;
 	left: 50%;
 	width: 1500px;
-	
+
 	margin-top:-400px; /* Half the height */
-    /* 
+    /*
     margin-left: -750px; /* Half the width */
-    
+
     width: 800px;
     padding-top: 10%;
     opacity: .6;
@@ -168,7 +168,7 @@ a:hover {
 	color: white;
 	background-color:#34495e;
 	padding: 20px 0 20px 0;
-	
+
 }
 
 .section-spacer-dark h2{
@@ -192,7 +192,7 @@ a:hover {
 
 .custom-btn{
 	color:#34495e;
-	padding: 5px 25px; 
+	padding: 5px 25px;
 	background-color: white;
 	border-color: #34495e;
 	border: 2px solid;
@@ -200,7 +200,7 @@ a:hover {
 }
 
 .custom-btn{
-	
+
 }
 /* END  S E C T I O N - S P A C E R */
 
@@ -213,7 +213,7 @@ a:hover {
 
 
 #section-welcome-header{
-	
+
 }
 
 
@@ -234,7 +234,7 @@ a:hover {
 /* START  C o n t a c t - S e c t i o n */
 .social-media-icons{
 	margin-bottom: 50px;
-	text-align: center;  
+	text-align: center;
 }
 
 .contact-email{
@@ -245,11 +245,11 @@ a:hover {
 
 /* START A r t i s t s - S e c t i o n */
 .custom-artist-section{
-	display: flex;		
+	display: flex;
 	letter-spacing: 0.2em;
-	
+
 	flex-direction: column;
-	color: #34495e;	
+	color: #34495e;
 }
 
 .custom-artist-section{
@@ -298,13 +298,13 @@ a:hover {
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	justify-content: center;
-	
+
 }
 
 .artist-overview div{
 	width: 300px;
 	height: 200px;
-	
+
 }
 .grid {
 	padding: 20px 20px 100px 20px;
@@ -417,10 +417,10 @@ a:hover {
   max-width: 300px;
   background-color: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);	
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   padding: 19px;
   margin: 10px;
-  
+
 }
 
 
@@ -462,7 +462,7 @@ a:hover {
 
 #btn-events{ background-color: #5bc0de;}
 
-#event-tbl {	
+#event-tbl {
 	width: 100%;
  	color: #fff;
  	letter-spacing: 0.3em;
@@ -470,7 +470,7 @@ a:hover {
 
 #event-tbl th {
 	padding:20px;
-	text-align: left;	
+	text-align: left;
 }
 
 #event-tbl td:nth-child(even) {
@@ -512,28 +512,28 @@ a:hover {
 
 footer p{
 	color:#fff;
-	background-color: #34495e; 
+	background-color: #34495e;
 	text-align: center;
 	padding:50px 0;
 	margin: 0 0;
 }
 /* END  f o o t e r  */
 @media screen and (max-width: 767px) {
-    
+
     .bg-img{
 	    height: 300px;
     }
-    
-    
+
+
     .costum-profil{
     	text-align: center;
 	}
-	
+
 	#logo-font{
 		width: 350px;
 		padding-top: 10%;
 	}
-	
+
 	#event-tbl {
  	letter-spacing: 0.1em;
  	font-size: 1.15em;
@@ -568,7 +568,7 @@ footer p{
 }
 
 .custom-modal-content{
-	background: rgba(121, 155, 194, 0.61);	
+	background: rgba(121, 155, 194, 0.61);
 }
 
 .custom-modal-content>div{

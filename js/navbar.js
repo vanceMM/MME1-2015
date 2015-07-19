@@ -1,7 +1,7 @@
 $(document).scroll(function(){
 	var navbar = $('.custom-navbar');
 	var scrollTop = $(this).scrollTop();
-	var navbtn = $('#nav-btn'); 
+	var navbtn = $('#nav-btn');
 	if(scrollTop > 10){
 		navbar.css({"background-color":"#2c3e50"});
 		navbar.css({"position":"fixed"});

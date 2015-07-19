@@ -29,9 +29,9 @@ function myFunction(response) {
         "</td><td>" +
         arr[i].artist +
         "</td></tr>";
-        
+
     }
-    
+
     console.log(out);
 
     document.getElementById("event-tbl").innerHTML = out;
