@@ -93,13 +93,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" id="custom-brand" href="#">Busker</a>
+				<a class="navbar-brand custom-navbar-menu" id="custom-brand" href="#">Busker</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 
 				<form class="navbar-form navbar-left">
 					<div>
-						<button type="submit" class="btn btn-info" id="nav-btn"><i class="glyphicon glyphicon-search"></i></button>
+	
 					<!--
 						<input type="search" class="form-control pull-left">
 					-->
@@ -119,12 +119,14 @@
 				</ul>
 				-->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#welcome">Welcome</a></li>
-					<li><a href="#artist">Artists</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a class="custom-navbar-menu" href="#welcome">Welcome</a></li>
+					<li><a class="custom-navbar-menu" href="#artist">Artists</a></li>
+					<li><a class="custom-navbar-menu" href="#">Events</a></li>
+					<li><a class="custom-navbar-menu" href="#contact">Contact</a></li>
+					<li id="id_search-btn"><button type="submit" class="btn btn-info custom-search" id="nav-btn"><i class="glyphicon glyphicon-search"></i></button></li>
+					<li id="id_search-field"><input type="text" class="custom-search custom-field btn" name="search-field" placeholder="search"/></li>
 					<li><a id="navbar-separator"><img src="bg/header/navbar/separator.png" width="auto" height="40px"></a></li>
-					<li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span></a></li>
+					<li><a class="custom-navbar-menu" href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -143,7 +145,58 @@
 			<div class="span3"></div>
 		</div>
 	</div>
-
+	
+	
+	<!-- S T A R T   Register-Header -->
+	<div id="register-wrapper">
+		<div class="bg-register">
+			<div class="row text-center custom-reg-header">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<h3>Register Header</h3>
+					<p>Regiser Body: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row text-center custom-reg-form">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+						
+						<div class="form-body text-center">
+							<form method="post" role="form">
+							<div class="form-group" id="custom-form-group">
+								<div class="col-xs-3">
+									<input class="form-control custom-reg-input" type="text" name="userName" placeholder="Vale von der Müllhalde" required="required" />
+								</div>
+								<div class="col-xs-3">
+									<input class="form-control custom-reg-input" type="email" name="email-name" placeholder="i<3buskers@gmail.com" required="required" />
+								</div>
+								<div class="col-xs-3">
+									<input class="form-control custom-reg-input" type="password" name="p" placeholder="Password" required="required" />
+								</div>
+								
+								<div clss="col-xs-3">
+								<button id="signMe-Btn" type="submit" class="btn btn-primary">Sign Me!</button>
+								</div>
+							</div>
+							</form>
+							<!--
+							<div class="checkbox custom-checkbox text-left">
+								<label><input type="checkbox">Artist?</label>
+							</div>
+							-->
+						</div>
+						<!--
+						<div class="modal-footer">
+							 <button type="submit" class="btn btn-primary">Sign Me!</button>
+						</div>
+						-->
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+	</div>
+	<!-- E N D   Register-Header -->
 <!-- START  L o g i n / R e g i s t e r - S e c t i o n -->
 	<!-- Modal -->
 	<div id="loginModal" class="modal fade" role="dialog">
@@ -173,10 +226,11 @@
 				</div>
 			</div>
 			<div class="text-center" id="reglink">
-				<p> Not connected? <a href="register.html">Sign up!</a>
+				<p> Not connected? <button type="button" class="btn btn-default" id="signUpBtn" data-dismiss="modal">Sign up!</button>
 			</div>
 		</div>
 	</div>
+	
 <!-- END  L o g i n - S e c t i o n -->
 
 <!-- START  R e g i s t e r - S e c t i o n -->
@@ -426,8 +480,8 @@
 				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-12">
-							<p>Lorem ipsum</p>
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, dolor sit amet.</p>
+							<p>Artist Name</p>
+							<p>Artist Description Lorem ipsum dolor sit amet, consetetur sadipscing elitr, dolor sit amet.</p>
 						</div>
 					</div>
 					<!-- message & social media -->

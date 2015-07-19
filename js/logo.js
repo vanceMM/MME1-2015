@@ -15,3 +15,20 @@ $(toggleTable).click(function(){
 });
 
 */
+
+
+$(document).ready(function(){
+	
+	var regWrapper = $('#register-wrapper');
+	regWrapper.hide();
+	
+	var bgFilter = $('#bg-filter');
+	var bgImg = $('#logo-font');
+	var signUpBtn = $('#signUpBtn');
+	signUpBtn.click(function(){
+		bgImg.hide();
+		bgFilter.hide();
+		regWrapper.show();
+	});
+
+});

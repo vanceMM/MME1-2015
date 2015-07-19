@@ -158,6 +158,18 @@ a:hover {
     padding-top: 10%;
     opacity: .6;
 }
+
+.bg-register{
+	width:100%;
+	height:750px;
+	/* gradiant filter
+	background-image: linear-gradient(to bottom, #6c5b7b 0%, #34495e 100%);
+	*/
+	background-image:url(../bg/header/loginscreen.jpg);
+	background-size:cover;
+	opacity: 1.0;
+}
+
 /* END css header */
 
 
@@ -454,6 +466,9 @@ a:hover {
 
 
 /* START  e v e n t  t a b l e  */
+#profil-section-events{
+	margin: 100px 0;
+}
 
 #profil-section-events div a{
 	letter-spacing: 0.5em;
@@ -613,3 +628,70 @@ footer p{
 }
 
 #register-Btn{margin-top: 15px;}
+
+
+/* START Searchbar */
+.custom-search{
+	margin: 8px 0;
+	text-align: center;
+}
+
+.btn:hover,.btn:focus{
+	color:white;
+}
+
+.custom-field{
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 0px;
+  color: white;
+}
+
+#id_search-field{
+	margin-left: 10px;
+}
+/* END Searchbar */
+
+#signUpBtn{
+	background-color: transparent;
+	border: 0px;
+	color: #f19148;
+}
+
+
+.custom-reg-header{
+	padding-top: 305px;
+	padding-bottom: 100px;
+}
+
+.custom-reg-header div>h3{
+	color:white;
+}
+.custom-reg-header div>p{
+	color:white;
+}
+
+.custom-reg-form{
+	padding: 20px 0 80px 0;
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.form-body{
+	margin-top: 70px;
+}
+
+.modal-footer{
+	border: 0px;
+}
+
+.custom-reg-input{
+	text-align: center;
+	padding: 20px 10px;
+	margin: 0 0 10px 0;
+	background-color: rgba(255,255,255,0.8);
+	border: 0px;
+	color:white;
+}
+
+#signMe-Btn{
+	
+}
